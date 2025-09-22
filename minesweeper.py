@@ -33,6 +33,10 @@ class minesweeper:
         self.grid_start_x = PADDING
         self.grid_start_y = (WINDOW_HEIGHT - (BOX_SIZE * self.height)) // 2
 
+        if self.mines > self.cell_count:
+            print("Error, the number of mines exceeds the number of cells on the board")
+            sys.exit(-1)
+
         pygame.init()
         pygame.font.init()
         self.FONT = pygame.font.SysFont('Arial', 20)
