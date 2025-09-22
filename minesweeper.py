@@ -15,7 +15,7 @@ WHITE = (255, 255, 255)
 GRAY = (200, 200, 200)
 BLACK = (0, 0, 0)
 BACKGROUND = (244, 244, 244)
-NUMBER_COLOR = [(255, 0, 0), (0, 0, 255), (0, 255, 0), (255, 0, 255), (255, 255, 0), (0, 255, 255), (199, 167, 122), (107, 207, 207), (139, 198, 129)]
+NUMBER_COLOR = [(0, 0, 255), (39, 232, 5), (155, 0, 0), (255, 0, 255), (196, 177, 0), (0, 255, 255), (199, 167, 122), (107, 207, 207), (139, 198, 129)]
 
 class minesweeper:
     def __init__(self, width, height, mines):
@@ -206,4 +206,10 @@ class minesweeper:
         pygame.quit()
         sys.exit()
 
-minesweeper(20, 20 ,50)
+if __name__ == "__main__":
+    if len(sys.argv) == 1:
+        minesweeper(16, 16, 40) # Run the game at default size and mine count
+    elif len(sys.argv) == 4:
+        minesweeper(int(sys.argv[1]), int(sys.argv[2]),int(sys.argv[3]))
+    else:
+        print("Error, mismatch number of arguments\n\nTo run minesweeper on command line, these parameters must be set\nminesweeper(width(int), height(int), mine_count(int))")
