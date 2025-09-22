@@ -19,3 +19,18 @@ The game concludes a win when the player succeeds in clearing all empty cells, o
 | LMB | Clear a cell | On an unopened cell |
 | | Perform a chord | On a numbered cell |
 | RMB | Toggle flag a cell | On an unopened cell |
+
+# Run
+
+To run, there are two methods
+## 1. Run the script directly
+This will summon a minesweeper board with the default size of 16x16 and 40 mines
+## 2. Command Line
+To run the game using a terminal, navigate to the directory of the folder and run the following:
+
+```python minesweeper.py [width] [height] [mine_count] ```
+- ```width``` (int) - The width of the board in cells
+- ```height``` (int) - The height of the board in cells
+- ```mine_count``` (int) - The number of mines on the board
+
+Note that ```mine_count``` cannot exceed the product of ```width``` and ```height```
